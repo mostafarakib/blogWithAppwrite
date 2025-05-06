@@ -48,8 +48,9 @@ export class AuthService {
     try {
       return await this.account.get();
     } catch (error) {
-      throw error;
+      console.log("error getting user", error);
     }
+    return null;
   }
 
   async logout() {
@@ -57,8 +58,9 @@ export class AuthService {
     try {
       await this.account.deleteSessions();
     } catch (error) {
-      throw error;
+      console.log("error logging out", error);
     }
+    return null;
   }
 }
 
