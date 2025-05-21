@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Contaianer, PostForm } from "../components/index";
+import { Container, PostForm } from "../components/index";
 import appwriteService from "../appwrite/servicesConfig";
 import { useNavigate, useParams } from "react-router-dom";
 
@@ -21,9 +21,9 @@ function EditPost() {
   }, [slug, navigate]);
   return post ? (
     <div className="py-8">
-      <Contaianer>
+      <Container>
         <PostForm post={post} />
-      </Contaianer>
+      </Container>
     </div>
   ) : null;
 }

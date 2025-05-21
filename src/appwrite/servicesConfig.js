@@ -4,7 +4,7 @@ import { Client, ID, Databases, Storage, Query } from "appwrite";
 
 export class DatabaseService {
   client = new Client();
-  databasees;
+  databases;
   storage;
 
   constructor() {

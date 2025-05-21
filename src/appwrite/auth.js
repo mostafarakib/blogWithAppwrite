@@ -44,7 +44,6 @@ export class AuthService {
   }
 
   async getCurrentUser() {
-    // eslint-disable-next-line no-useless-catch
     try {
       return await this.account.get();
     } catch (error) {
@@ -60,7 +59,6 @@ export class AuthService {
     } catch (error) {
       console.log("error logging out", error);
     }
-    return null;
   }
 }
 
